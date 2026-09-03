@@ -14,9 +14,14 @@ available through
 
 Each stable release is expected to contain:
 
-- `Vizor-android.apk`
-- `Vizor-android.apk.sha256`
-- `release-metadata.json`
+- `Vizor-android.apk` and `.sha256` — 64-bit ARM, recommended for most phones
+- `Vizor-android-armeabi-v7a.apk` and `.sha256` — legacy 32-bit ARM
+- `Vizor-android-x86_64.apk` and `.sha256` — Intel Chromebooks and emulators
+- `Vizor-android-metadata.json`
+
+`Vizor-android.apk` is an arm64-v8a APK, not a universal APK. Alternative
+architectures have explicit filenames so most users can use the default download
+without choosing a CPU architecture.
 
 Release candidates and internal builds are marked as GitHub prereleases and
 are never selected as the latest stable release.
@@ -43,9 +48,9 @@ value differs.
 ## Source provenance
 
 Every release identifies the corresponding source tag and exact source commit
-from `chainapsis/vizor-wallet`. The accompanying `release-metadata.json`
-records that provenance together with the APK checksum, Android version code,
-and signing-certificate fingerprint.
+from `chainapsis/vizor-wallet`. The accompanying `Vizor-android-metadata.json`
+records that provenance together with the ABI-specific APK checksums, Android
+version code, and signing-certificate fingerprint.
 
 Source code, development, pull requests, and issue tracking remain in the
 [Vizor Wallet repository](https://github.com/chainapsis/vizor-wallet).
