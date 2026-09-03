@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vizor Wallet issues
+    url: https://github.com/chainapsis/vizor-wallet/issues
+    about: Report bugs and request features in the source repository.
