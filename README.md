@@ -14,9 +14,14 @@ available through
 
 Each stable release is expected to contain:
 
-- `Vizor-android.apk` and `.sha256` — 64-bit ARM, recommended for most phones
-- `Vizor-android-armeabi-v7a.apk` and `.sha256` — legacy 32-bit ARM
-- `Vizor-android-x86_64.apk` and `.sha256` — Intel Chromebooks and emulators
+- `Vizor-android.apk` and `Vizor-android.apk.sha256` — 64-bit ARM,
+  recommended for most phones
+- `Vizor-android-arm64-v8a.apk` and
+  `Vizor-android-arm64-v8a.apk.sha256` — identical ABI-labelled alias
+- `Vizor-android-armeabi-v7a.apk` and
+  `Vizor-android-armeabi-v7a.apk.sha256` — legacy 32-bit ARM
+- `Vizor-android-x86_64.apk` and `Vizor-android-x86_64.apk.sha256` — Intel
+  Chromebooks and emulators
 - `Vizor-android-metadata.json`
 
 `Vizor-android.apk` is an arm64-v8a APK, not a universal APK. Alternative
@@ -25,6 +30,12 @@ without choosing a CPU architecture.
 
 Release candidates and internal builds are marked as GitHub prereleases and
 are never selected as the latest stable release.
+
+## Obtainium
+
+Obtainium can monitor this repository for new Vizor releases and install the
+appropriate APK. See [Use Vizor with Obtainium](OBTAINIUM.md) for manual setup
+instructions.
 
 ## Authenticity
 
